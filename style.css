@@ -76,3 +76,46 @@ body{
 .Relogio .number.hours-11{
     --rotation: 330deg;
 }
+
+.Relogio .ponteiro{
+    --rotation:0;
+
+    position: absolute;
+    bottom: 50%;
+    left: 50%; 
+    background-color: black;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    transform-origin: bottom;
+    z-index: 10;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+}
+
+.Relogio::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    z-index: 11;
+    background-color: black;
+    transform: translate(-50%, -50%);
+}
+
+.Relogio .ponteiro.segundos{
+    width: 3px;
+    height: 40%;
+    background-color: crimson;
+}
+.Relogio .ponteiro.minutos{
+    width: 7px;
+    height: 35%;
+    background-color: black;
+}
+.Relogio .ponteiro.minutos{
+    width: 10px;
+    height: 25%;
+    background-color: black;
+}
