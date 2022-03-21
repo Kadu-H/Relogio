@@ -114,7 +114,7 @@ body{
     height: 35%;
     background-color: black;
 }
-.Relogio .ponteiro.minutos{
+.Relogio .ponteiro.horas{
     width: 10px;
     height: 25%;
     background-color: black;

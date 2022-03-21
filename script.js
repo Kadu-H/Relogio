@@ -1,6 +1,6 @@
-const ponteiroSegundo = document.getElementById("seg")
-const ponteiroMinutos = document.getElementById("min")
-const ponteiroHoras = document.getElementById("hor")
+const ponteiroSegundo = document.querySelector(".ponteiro.segundos"); 
+const ponteiroMinutos = document.querySelector(".ponteiro.minutos");
+const ponteiroHoras = document.querySelector(".ponteiro.horas");
 
 
 const setRotation = (element, rotationPercentage) => {
@@ -12,8 +12,8 @@ const setClock = () =>{
     const atualDate = new Date()
 
     const secondsPercentage = atualDate.getSeconds() / 60
-    const minutesPercentage = atualDate.getMinutes() / 60
-    const hoursPercentage = atualDate.getHours() / 12
+    const minutesPercentage = (secondsPercentage + atualDate.getMinutes()) / 60
+    const hoursPercentage = (minutesPercentage + atualDate.getHours()) / 12
 
     setRotation(ponteiroSegundo, secondsPercentage);
     setRotation(ponteiroMinutos, minutesPercentage);
